@@ -8,18 +8,25 @@ import Navbar from './components/navbar/Navbar';
 // import pages
 import Home from './pages/Home';
 
+// import data
+import data from './data.json';
+import { Context } from './context/context';
+
 
 function App() {
+
   return (
-    <BrowserRouter>
-      <div className="container">
-        <Sidebar/>
-        <div className="main-box">
-          <Navbar/>
-          <Home/>
+    <Context.Provider value={data}>
+      <BrowserRouter>
+        <div className="container">
+          <Sidebar/>
+          <div className="main-box">
+            <Navbar/>
+            <Home/>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Context.Provider>
   );
 }
 

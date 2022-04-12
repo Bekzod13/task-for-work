@@ -48,5 +48,5 @@ a{
   position: relative;
 }
 .main-box{
-  width: calc(100% - var(--side));
+  width: calc(99% - var(--side));
 }

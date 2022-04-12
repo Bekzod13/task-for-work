@@ -1,11 +1,11 @@
 {
-    "carusel-products": [
+    "caruselProducts": [
         {
             "id":1,
             "title": "Sale Orange",
             "description": "Promocide down",
             "color": "#FF7F10",
-            "btn-text": "orange20",
+            "btnText": "orange20",
             "img": "images/img1.png"
         },
         {
@@ -13,7 +13,7 @@
             "title": "Tomato",
             "description": "Buy at affordable prices",
             "color": "#CE3459",
-            "btn-text": "",
+            "btnText": "",
             "img": "images/img2.png"
         },
         {
@@ -21,7 +21,7 @@
             "title": "Sale 40%",
             "description": "Very tasty pasta",
             "color": "#DFF850",
-            "btn-text": "food40",
+            "btnText": "food40",
             "img": "images/img3.png"
         },
         {
@@ -29,7 +29,7 @@
             "title": "Collection",
             "description": "Sale full Pack",
             "color": "#2F8CF6",
-            "btn-text": "collect",
+            "btnText": "collect",
             "img": "images/img4.png"
         },
         {
@@ -37,7 +37,7 @@
             "title": "Sale 40%",
             "description": "Very tasty pasta",
             "color": "#7753F6",
-            "btn-text": "test40",
+            "btnText": "test40",
             "img": "images/img5.png"
         },
         {
@@ -45,16 +45,84 @@
             "title": "Sale Orange",
             "description": "Promocide down",
             "color": "#FF7F10",
-            "btn-text": "orange20",
+            "btnText": "orange20",
             "img": "images/img1.png"
+        }
+    ],
+
+    "categories":[
+        {
+            "id":1,
+            "text": "Pantrys",
+            "active": false
         },
         {
+            "id":2,
+            "text": "Fruits and Vegetables",
+            "active": true
+        },
+        {
+            "id":3,
+            "text": "Eggs and Dairys",
+            "active": false
+        },
+        {
+            "id":4,
+            "text": "Frozens",
+            "active": false
+        },
+        {
+            "id":5,
+            "text": "Beverange",
+            "active": false
+        },
+        {
+            "id":6,
+            "text": "Snacks",
+            "active": false
+        }
+        ,
+        {
             "id":7,
-            "title": "Tomato",
-            "description": "Buy at affordable prices",
-            "color": "#CE3459",
-            "btn-text": "",
-            "img": "images/img2.png"
+            "text": "Households",
+            "active": false
+        }
+    ],
+    "products":[
+        {
+            "id":1,
+            "img": "images/pro1.png",
+            "price": 5.99,
+            "title": "Calavo Hass Avocados",
+            "liked": false
+        },
+        {
+            "id":2,
+            "img": "images/pro2.png",
+            "price": 3.89,
+            "title": "Lemons (Large) 8",
+            "liked": false
+        },
+        {
+            "id":3,
+            "img": "images/pro3.png",
+            "price": 10.5,
+            "title": "Jumbo Cantaloupe",
+            "liked": false
+        },
+        {
+            "id":4,
+            "img": "images/pro4.png",
+            "price": 4.90,
+            "title": "Zespri Kiwifruit 2 lb",
+            "liked": true
+        },
+        {
+            "id":5,
+            "img": "images/pro5.png",
+            "price": 4.90,
+            "title": "Hass Large Avocado",
+            "liked": false
         }
     ]
 }
