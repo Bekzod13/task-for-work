@@ -1,0 +1,52 @@
+
+/* font of google font INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* settings */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  /* main colors */
+  --bg: #E5E5E5;
+  --main: #2E3456;
+  --green-main: #16AA16;
+  --gold: #FFB800;
+  --orange-main: #F26110;
+  --wht: #fff;
+  --blc: #000;
+  --red-main: #D21234;
+
+  /* some worked colors */
+  --orange: #FF7F10;
+  --red: #CE3459;
+  --green: #DFF850;
+  --blue: #2F8CF6;
+  --violet: #7753F6;
+  --gray: #C0C2CC;
+  
+  /* some size */
+  --side: 250px;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  color: var(--main);
+  background: var(--bg);
+}
+a{
+  text-decoration: none;
+}
+.container{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+.main-box{
+  width: calc(100% - var(--side));
+}

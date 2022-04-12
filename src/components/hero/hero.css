@@ -1,0 +1,109 @@
+.hero{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-main{
+    width: calc(100% - 143px);
+    height: 100%;
+    border: 1px solid var(--gray);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.hero-img{
+    width: 100%;
+    height: 200px;
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+}
+.hero-details{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    color: var(--blc);
+}
+.hero-title{
+    font-size: 28px;
+    font-weight: 500;
+}
+.hero-link{
+    margin-left: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blc);
+    position: relative;
+}
+.hero-link::after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--main);
+    display: flex;
+    position: absolute;
+    left: 0;
+    opacity: .5;
+}
+.hero-link-icon{
+    font-size: 17px;
+    display: flex;
+    margin-right: 10px;
+}
+.hero-link-text{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px dotted var(--blc);
+}
+.hero-reting-star{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blc);
+}
+.hero-star{
+    font-size: 22px;
+    color: var(--gold);
+}
+.hero-cart{
+    width: 130px;
+    background: var(--wht);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-shop{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--main);
+    opacity: .5;
+}
+.hero-shop-icon{
+    font-size: 26px;
+}
+.hero-shop p{
+    font-weight: 500;
+}
+.hero-shop-active{
+    background: var(--main);
+    color: var(--wht);
+    opacity: 1;
+}
