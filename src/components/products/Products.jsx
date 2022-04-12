@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Context } from './../../context/context';
 import './products.css';
+import { useCart } from 'react-use-cart';
 
 // import icons
 import {HiPlus} from 'react-icons/hi';
@@ -8,7 +9,9 @@ import {RiPercentFill, RiHeart3Line, RiHeart3Fill} from 'react-icons/ri';
 
 const Products = () => {
 
-    const products = useContext(Context).products;
+    const products = useContext(Context).data.products;
+
+    const {addItem} = useCart();
 
   return (
     <>
@@ -27,7 +30,7 @@ const Products = () => {
                             <div className="pro-price">
                                 ${item.price}
                             </div>
-                            <div className="pro-buy">
+                            <div className="pro-buy"  onClick={() => addItem(item)} >
                                 <HiPlus/>
                             </div>
                         </div>

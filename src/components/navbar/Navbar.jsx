@@ -1,4 +1,7 @@
+import { Context } from '../../context/context';
+import { useContext } from 'react';
 import './nav.css';
+import { useCart } from 'react-use-cart';
 
 // import icons
 import { 
@@ -12,6 +15,12 @@ import { HiAdjustments} from 'react-icons/hi';
 import { FiShoppingBag } from 'react-icons/fi';
 
 const Navbar = () => {
+
+  const { cartTotal } = useCart();
+
+  const toggle = useContext(Context);
+
+
   return (
     <div className='navbar'>
       <div className="nav-close-sidebar">
@@ -61,12 +70,12 @@ const Navbar = () => {
           By 09:00 - 23:00
         </div>
       </div>
-      <div className="nav-cart-box">
+      <div className="nav-cart-box" onClick={()=>toggle.setToggle(true)}>
         <div className="nav-cart-icon">
           <FiShoppingBag/>
         </div>
         <p className="nav-cart-count">
-          $230.80
+          ${cartTotal}
         </p>
       </div>
     </div>

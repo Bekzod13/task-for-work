@@ -8,7 +8,7 @@ import {RiArrowDownSLine} from 'react-icons/ri';
 
 const Categories = () => {
 
-    const categories = useContext(Context).categories;
+    const categories = useContext(Context).data.categories;
 
   return (
     <div className='categories'>

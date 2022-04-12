@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-
+import { CartProvider } from "react-use-cart";
 
 // import components
 import Sidebar from "./components/sidebar/Sidebar";
@@ -15,18 +16,22 @@ import { Context } from './context/context';
 
 function App() {
 
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <Context.Provider value={data}>
-      <BrowserRouter>
-        <div className="container">
-          <Sidebar/>
-          <div className="main-box">
-            <Navbar/>
-            <Home/>
+    <CartProvider>
+      <Context.Provider value={{data, toggle, setToggle}}>
+        <BrowserRouter>
+          <div className="container">
+            <Sidebar/>
+            <div className="main-box">
+              <Navbar/>
+              <Home/>
+            </div>
           </div>
-        </div>
-      </BrowserRouter>
-    </Context.Provider>
+        </BrowserRouter>
+      </Context.Provider>
+    </CartProvider>
   );
 }
 

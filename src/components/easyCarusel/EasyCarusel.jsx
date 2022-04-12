@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const EasyCarusel = () => {
 
-  const caruselProducts = useContext(Context).caruselProducts;
+  const caruselProducts = useContext(Context).data.caruselProducts;
 
   return (
     <div className='carusel'>
