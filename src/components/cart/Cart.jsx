@@ -21,39 +21,42 @@ const Cart = () => {
 
   return (
       <>
-    <div className={toggle.toggle ? "bg-div bg-div-active" : "bg-div"} onClick={()=>toggle.setToggle(false)} ></div>
-    <div className={toggle.toggle ? "cart-main cart-main-active" : "cart-main"}>
-      <h1 className='cart-header'>Cart Items</h1>
-      <h2 className='cart-total'>${cartTotal}</h2>
-      <div className="cart-products">
-          {
-              items.length === 0 ? <h2 className='cart-header'>
-                  Your cart is empty.
-              </h2>:
-              items.map(item=>(
-                  <div className="cart-product" key={item.id}>
-                      <div>
-                        <div className="cart-pro-title">
-                            {item.title}
+        <div 
+            className={toggle.toggle || toggle.toggle2 ? "bg-div bg-div-active" : "bg-div"} 
+            onClick={()=>toggle.setToggle(false) || toggle.setToggle2(false)} >
+        </div>
+        <div className={toggle.toggle ? "cart-main cart-main-active" : "cart-main"}>
+        <h1 className='cart-header'>Cart Items</h1>
+        <h2 className='cart-total'>${cartTotal}</h2>
+        <div className="cart-products">
+            {
+                items.length === 0 ? <h2 className='cart-header'>
+                    Your cart is empty.
+                </h2>:
+                items.map(item=>(
+                    <div className="cart-product" key={item.id}>
+                        <div>
+                            <div className="cart-pro-title">
+                                {item.title}
+                            </div>
+                            <div className="cart-pro-price">
+                                {item.price} x {item.quantity}
+                            </div>
                         </div>
-                        <div className="cart-pro-price">
-                            {item.price} x {item.quantity}
+                        <div className="cart-pro-delete" onClick={() => removeItem(item.id)}>
+                            <FaTrash/>
                         </div>
-                      </div>
-                      <div className="cart-pro-delete" onClick={() => removeItem(item.id)}>
-                          <FaTrash/>
-                      </div>
-                  </div>
-              ))
-          }
-      </div>
-      <div className="cart-clear" onClick={() => emptyCart()}>
-          <IoTrashBinSharp/> Clear
-      </div>
-      <div className="cart-close" onClick={()=>toggle.setToggle(false)}>
-        <RiCloseFill/>
-      </div>
-    </div>
+                    </div>
+                ))
+            }
+        </div>
+        <div className="cart-clear" onClick={() => emptyCart()}>
+            <IoTrashBinSharp/> Clear
+        </div>
+        <div className="cart-close" onClick={()=>toggle.setToggle(false)}>
+            <RiCloseFill/>
+        </div>
+        </div>
       </>
   )
 }

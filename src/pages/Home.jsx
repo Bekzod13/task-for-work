@@ -4,6 +4,7 @@ import EasyCarusel from '../components/easyCarusel/EasyCarusel';
 import Products from '../components/products/Products';
 import Hero from '../components/hero/Hero';
 import Cart from '../components/cart/Cart';
+import CalendarMe from '../components/calendar/CalendarMe';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Categories/>
       <Products/>
       <Cart/>
+      <CalendarMe/>
     </>
   )
 }

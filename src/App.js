@@ -17,10 +17,18 @@ import { Context } from './context/context';
 function App() {
 
   const [toggle, setToggle] = useState(false);
+  const [toggle2, setToggle2] = useState(false);
 
   return (
     <CartProvider>
-      <Context.Provider value={{data, toggle, setToggle}}>
+      <Context.Provider 
+        value={{ 
+          data, 
+          toggle, 
+          setToggle, 
+          toggle2, 
+          setToggle2 
+          }}>
         <BrowserRouter>
           <div className="container">
             <Sidebar/>

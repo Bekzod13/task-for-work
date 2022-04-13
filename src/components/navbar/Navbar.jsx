@@ -62,7 +62,7 @@ const Navbar = () => {
           <HiAdjustments/>
         </div>
       </div>
-      <div className="nav-date-box">
+      <div className="nav-date-box"  onClick={()=>toggle.setToggle2(true)}>
         <div className="nav-time-line">
           <span className="nav-time-icon">
             <RiTimerFlashFill/>
